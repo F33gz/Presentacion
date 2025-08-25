@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Copilot: el copiloto de IA para desarrolladores</title>
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css" id="theme">
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/monokai.css">
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Diapositiva 1 - Título -->
+            <section data-background-color="#f6f8fa" data-timing="50">
+                <div class="slide-header">
+                    <img src="images/vscode-copilot-screenshot.png" alt="GitHub Copilot Logo" class="header-image">
+                </div>
+                <h1 class="main-title">GitHub Copilot</h1>
+                <h2 class="subtitle">el copiloto de IA para desarrolladores</h2>
+                <div class="key-points">
+                    <div class="point">✨ Acelera el primer borrador de código</div>
+                    <div class="point">💬 Sugerencias en el editor, chat y PRs</div>
+                </div>
+                <aside class="notes">
+                    Hoy les presento GitHub Copilot, un asistente de IA diseñado para acelerar el trabajo de los desarrolladores. En cinco minutos veremos qué es, dónde vive dentro del flujo de trabajo, qué aporta, sus límites y cómo empezar a usarlo de forma responsable.
+                </aside>
+            </section>
+
+            <!-- Diapositiva 2 - Introducción: ¿Por qué ahora? -->
+            <section data-background-color="#0969da" data-timing="50">
+                <h2 class="slide-title light">El contexto</h2>
+                <div class="context-layout">
+                    <div class="content-left">
+                        <div class="content-grid light">
+                            <div class="benefit">
+                                <span class="icon">🤖</span>
+                                <span>La IA generativa acelera tareas repetitivas</span>
+                            </div>
+                            <div class="benefit">
+                                <span class="icon">⚡</span>
+                                <span>Mejora el tiempo al primer borrador</span>
+                            </div>
+                            <div class="benefit">
+                                <span class="icon">🎯</span>
+                                <span>Mantiene al desarrollador en control</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <img src="images/ai-coding-concept.webp" alt="IA + Código" class="context-image">
+                    </div>
+                </div>
+                <aside class="notes">
+                    La IA generativa llegó al desarrollo para reducir trabajo mecánico y darnos un primer borrador más rápido. Copilot no reemplaza al desarrollador: sugiere, nosotros decidimos. La clave es ganar velocidad sin sacrificar calidad ni buenas prácticas.
+                </aside>
+            </section>
+
+            <!-- Diapositiva 3 - ¿Qué es GitHub Copilot? -->
+            <section data-background-color="#2da44e" data-timing="50">
+                <div class="slide-header">
+                    <img src="images/copilot-free.jpg" alt="GitHub Copilot" class="header-image">
+                </div>
+                <h2 class="slide-title light">Definición y capacidades</h2>
+                <div class="definition-box">
+                    <p class="definition light">Asistente de IA que sugiere código y explica cambios</p>
+                </div>
+                <div class="capabilities light">
+                    <div class="capability">
+                        <strong>Funciona en:</strong> VS Code, JetBrains, Neovim y GitHub (PRs)
+                    </div>
+                    <div class="capability">
+                        <strong>Modalidades:</strong> Autocompletado, Chat, Pull Requests, CLI
+                    </div>
+                </div>
+                <aside class="notes">
+                    Copilot es un asistente que sugiere líneas y bloques de código, genera pruebas, explica diffs y ayuda desde el editor, el chat integrado y los pull requests. Está disponible en editores populares y también ofrece una CLI para la terminal, cubriendo gran parte del flujo diario.
+                </aside>
+            </section>
+
+            <!-- Diapositiva 4 - ¿Cómo se usa? (Dónde 'vive') -->
+            <section data-background-color="#fb8500" data-timing="50">
+                <h2 class="slide-title light">Flujo de trabajo típico</h2>
+                <div class="workflow-diagram">
+                    <div class="workflow-step">
+                        <div class="step-icon">📝</div>
+                        <div class="step-content">
+                            <h3>Editor</h3>
+                            <p>autocompleta y transforma código</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-icon">💬</div>
+                        <div class="step-content">
+                            <h3>Chat</h3>
+                            <p>preguntas con contexto del repo/archivo</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-icon">🔍</div>
+                        <div class="step-content">
+                            <h3>PRs</h3>
+                            <p>resúmenes y sugerencias en diffs</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-icon">⌨️</div>
+                        <div class="step-content">
+                            <h3>CLI</h3>
+                            <p>ayuda con comandos y scripts</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    En el editor, Copilot predice el siguiente bloque y puede refactorizar o documentar. En el chat, responde con contexto del archivo o repo abierto. En PRs, resume cambios y sugiere mejoras. Y en la terminal, propone comandos y explica scripts, cerrando el círculo de desarrollo.
+                </aside>
+            </section>
+
+            <!-- Diapositiva 5 - Beneficios y límites -->
+            <section data-background-color="#24292f" data-timing="50">
+                <h2 class="slide-title light">Qué aporta y en qué tener cuidado</h2>
+                <div class="benefits-limits">
+                    <div class="benefits-section">
+                        <h3 class="section-title green">✅ Beneficios</h3>
+                        <ul class="benefit-list">
+                            <li>Velocidad, menos tareas repetitivas</li>
+                            <li>Mejor onboarding</li>
+                            <li>Generación de tests y esqueletos</li>
+                            <li>Refactors y documentación</li>
+                        </ul>
+                    </div>
+                    <div class="limits-section">
+                        <h3 class="section-title orange">⚠️ Límites</h3>
+                        <ul class="limit-list">
+                            <li>Posibles "alucinaciones"</li>
+                            <li>Calidad depende del contexto</li>
+                            <li>Revisar código siempre</li>
+                            <li>No pegar secretos, pedir tests</li>
+                        </ul>
+                    </div>
+                </div>
+                <aside class="notes">
+                    Los beneficios más claros son velocidad y reducción de trabajo repetitivo, además de facilitar el onboarding. Casos comunes: crear esqueletos, generar pruebas y documentar. Pero puede proponer APIs inexistentes o enfoques subóptimos. Por eso, revisamos siempre, evitamos compartir secretos y pedimos tests junto con el código.
+                </aside>
+            </section>
+
+
+
+            <!-- Diapositiva FAQ (opcional) -->
+            <section data-background-color="#6f42c1">
+                <h2 class="slide-title light">FAQ</h2>
+                <div class="faq-content light">
+                    <div class="faq-item">
+                        <strong>Q:</strong> ¿Qué lenguajes soporta?<br>
+                        <strong>A:</strong> Lenguajes y marcos más usados están soportados.
+                    </div>
+                    <div class="faq-item">
+                        <strong>Q:</strong> ¿Qué pasa con privacidad y cumplimiento?<br>
+                        <strong>A:</strong> Las opciones varían según el plan y políticas de la organización.
+                    </div>
+                    <div class="faq-item">
+                        <strong>Q:</strong> ¿Sustituye las revisiones humanas?<br>
+                        <strong>A:</strong> No sustituye las revisiones humanas: es un copiloto, no piloto automático.
+                    </div>
+                </div>
+                <aside class="notes">
+                    Lenguajes y marcos más usados están soportados. En privacidad y cumplimiento, las opciones varían según el plan y políticas de la organización. Y no sustituye las revisiones humanas: es un copiloto, no piloto automático.
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+
+
+    <!-- Reveal.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/highlight.js"></script>
+    
+    <!-- Custom script -->
+    <script src="script.js"></script>
+</body>
+</html>

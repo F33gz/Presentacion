@@ -1,0 +1,531 @@
+/* Variables de colores GitHub */
+:root {
+    --github-black: #24292f;
+    --github-blue: #0969da;
+    --github-green: #2da44e;
+    --github-orange: #fb8500;
+    --github-purple: #6f42c1;
+    --github-gray-light: #f6f8fa;
+    --github-gray-dark: #656d76;
+    --white: #ffffff;
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+}
+
+/* Override de estilos base de Reveal.js */
+.reveal {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--github-black);
+}
+
+.reveal .slides section {
+    padding: 15px;
+    text-align: center;
+    line-height: 1.2;
+    height: auto;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Estilos para títulos */
+.main-title {
+    font-size: 2.4em;
+    font-weight: 700;
+    color: var(--github-black);
+    margin-bottom: 0.4em;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.4em;
+    font-weight: 400;
+    color: var(--github-gray-dark);
+    margin-bottom: 0.8em;
+    line-height: 1.2;
+}
+
+.slide-title {
+    font-size: 1.9em;
+    font-weight: 600;
+    margin-bottom: 0.8em;
+    color: var(--github-black);
+}
+
+.slide-title.light {
+    color: var(--white);
+}
+
+/* Header de diapositivas */
+.slide-header {
+    margin-bottom: 1em;
+}
+
+.header-image {
+    max-height: 60px;
+    max-width: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.header-image.small {
+    max-height: 60px;
+    max-width: 120px;
+}
+
+/* Puntos clave en la primera diapositiva */
+.key-points {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    margin-top: 1.5em;
+}
+
+.point {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--github-blue);
+    background: rgba(9, 105, 218, 0.1);
+    padding: 0.6em 1.2em;
+    border-radius: 6px;
+    border-left: 3px solid var(--github-blue);
+}
+
+/* Grid de contenido */
+.content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    margin-top: 1.5em;
+}
+
+.content-grid.light {
+    color: var(--white);
+}
+
+/* Layout específico para la segunda diapositiva */
+.context-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    margin-top: 1.5em;
+}
+
+.content-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.context-image {
+    max-height: 160px;
+    max-width: 200px;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.8em 1.5em;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+}
+
+.icon {
+    font-size: 1.5em;
+    min-width: 1.2em;
+}
+
+/* Definición y capacidades */
+.definition-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1.2em 1.5em;
+    border-radius: 10px;
+    margin: 1.5em 0;
+    backdrop-filter: blur(10px);
+}
+
+.definition {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.definition.light {
+    color: var(--white);
+}
+
+.capabilities {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1.5em;
+}
+
+.capabilities.light {
+    color: var(--white);
+}
+
+.capability {
+    font-size: 0.95em;
+    padding: 0.8em 1.5em;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+}
+
+/* Diagrama de flujo de trabajo */
+.workflow-diagram {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+    margin-top: 1.5em;
+    padding: 1.5em;
+}
+
+.workflow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4em;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.2em;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.workflow-step:hover {
+    transform: translateY(-3px);
+}
+
+.step-icon {
+    font-size: 2em;
+    margin-bottom: 0.3em;
+}
+
+.step-content h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--github-black);
+    margin: 0 0 0.2em 0;
+}
+
+.step-content p {
+    font-size: 0.8em;
+    color: var(--github-gray-dark);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.workflow-arrow {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--white);
+}
+
+/* Beneficios y límites */
+.benefits-limits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    margin-top: 1.5em;
+    color: var(--white);
+}
+
+.benefits-section,
+.limits-section {
+    text-align: left;
+}
+
+.section-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 0.8em;
+    text-align: center;
+}
+
+.section-title.green {
+    color: var(--github-green);
+}
+
+.section-title.orange {
+    color: var(--github-orange);
+}
+
+.benefit-list,
+.limit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefit-list li,
+.limit-list li {
+    font-size: 0.95em;
+    padding: 0.6em 1em;
+    margin-bottom: 0.6em;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+
+
+/* FAQ */
+.faq-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    margin-top: 1.5em;
+    text-align: left;
+}
+
+.faq-content.light {
+    color: var(--white);
+}
+
+.faq-item {
+    padding: 1.2em 1.5em;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+    font-size: 0.95em;
+    line-height: 1.3;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .reveal {
+        font-size: 24px;
+    }
+    
+    .main-title {
+        font-size: 2.2em;
+    }
+    
+    .slide-title {
+        font-size: 1.8em;
+    }
+    
+    /* Layout responsive para la segunda diapositiva */
+    .context-layout {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+    
+    .context-image {
+        max-height: 120px;
+        max-width: 150px;
+    }
+    
+    .workflow-diagram {
+        flex-direction: column;
+    }
+    
+    .workflow-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .benefits-limits {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+    
+    .workflow-step {
+        min-width: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reveal .slides section {
+        padding: 15px;
+    }
+    
+    .reveal {
+        font-size: 20px;
+    }
+    
+    .main-title {
+        font-size: 1.8em;
+    }
+    
+    .slide-title {
+        font-size: 1.4em;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal .slides section.present .point,
+.reveal .slides section.present .benefit,
+.reveal .slides section.present .workflow-step,
+.reveal .slides section.present .step {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Ocultar elementos específicos de accesibilidad en presentación */
+.reveal .slides section aside.notes {
+    display: none;
+}
+
+/* Print styles para PDF export - optimizado para mejor visualización */
+@media print {
+    .reveal .slides section {
+        page-break-after: always;
+        padding: 20px !important;
+        height: auto !important;
+        min-height: 90vh;
+    }
+    
+    /* Ajustes específicos para PDF */
+    .reveal {
+        font-size: 22px !important;
+    }
+    
+    .main-title {
+        font-size: 2.2em !important;
+        margin-bottom: 0.3em !important;
+    }
+    
+    .subtitle {
+        font-size: 1.3em !important;
+        margin-bottom: 0.6em !important;
+    }
+    
+    .slide-title {
+        font-size: 1.8em !important;
+        margin-bottom: 0.6em !important;
+    }
+    
+    .header-image {
+        max-height: 50px !important;
+        max-width: 100px !important;
+    }
+    
+    .header-image.small {
+        max-height: 35px !important;
+        max-width: 70px !important;
+    }
+    
+    .context-layout {
+        flex-direction: row !important;
+        gap: 1.5em !important;
+    }
+    
+    .context-image {
+        max-height: 160px !important;
+        max-width: 200px !important;
+    }
+    
+    .point {
+        font-size: 1em !important;
+        padding: 0.5em 1em !important;
+        margin-bottom: 0.5em !important;
+    }
+    
+    .benefit {
+        font-size: 0.9em !important;
+        padding: 0.6em 1.2em !important;
+    }
+    
+    .definition {
+        font-size: 1.1em !important;
+    }
+    
+    .capability {
+        font-size: 0.85em !important;
+        padding: 0.6em 1.2em !important;
+    }
+    
+    .workflow-step {
+        min-width: 130px !important;
+        padding: 1em !important;
+    }
+    
+    .step-content h3 {
+        font-size: 1em !important;
+    }
+    
+    .step-content p {
+        font-size: 0.75em !important;
+    }
+    
+    .step-icon {
+        font-size: 1.8em !important;
+    }
+    
+    .workflow-arrow {
+        font-size: 1.3em !important;
+    }
+    
+    .benefit-list li,
+    .limit-list li {
+        font-size: 0.85em !important;
+        padding: 0.5em 0.8em !important;
+        margin-bottom: 0.4em !important;
+    }
+    
+    .section-title {
+        font-size: 1.2em !important;
+    }
+    
+    .faq-item {
+        font-size: 0.85em !important;
+        padding: 1em 1.2em !important;
+    }
+    
+    /* Mejores colores para impresión */
+    .point {
+        background: rgba(9, 105, 218, 0.2) !important;
+        border-left: 2px solid var(--github-blue) !important;
+    }
+    
+    .benefit, .capability, .benefit-list li, .limit-list li, .faq-item {
+        background: rgba(0, 0, 0, 0.05) !important;
+        backdrop-filter: none !important;
+    }
+    
+    .definition-box {
+        background: rgba(0, 0, 0, 0.08) !important;
+        backdrop-filter: none !important;
+    }
+    
+    .workflow-step {
+        background: rgba(255, 255, 255, 0.95) !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    }
+}
